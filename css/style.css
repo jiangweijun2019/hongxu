@@ -77,6 +77,16 @@ a:active {
 	margin-right: 20px;
 }
 
+#logo1{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#logo1 img{
+	margin-top: 0;
+}
+
 .collapse_btn {
 	float: right;
 }
