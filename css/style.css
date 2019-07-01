@@ -500,6 +500,11 @@ footer .footer-copyright {
 	margin-bottom: 14px;
 }
 
+.contact-icon .qrcode{
+	width: 30%;
+	margin-bottom:0;
+}
+
 .icon-list {
 	width: 80%;
 	margin: 80px auto 0px;
