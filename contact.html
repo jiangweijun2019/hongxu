@@ -27,11 +27,11 @@
                 <span class="icon-bar"></span>
             </button>
 					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
-						<img logo page-scroll src="images/logo.jpg">
+						
 					</div>
 				</div>
 				<div id="logo2" class="logo pull-left">
-					<img logo page-scroll src="images/logo.jpg">
+					
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
@@ -55,8 +55,8 @@
 			</div>
 		</div>
 		<section class="header">
-			<div class="bg">
-				<img src="images/contact-top.jpg" alt="">
+			<div class="bg" id="bg">
+				
 			</div>
 		</section>
 		<section>
@@ -77,14 +77,12 @@
 						<!--<img src="images/contact-phone.png" alt="">
 						<p>400－820－6372</p>-->
 						<div class="text-center contact-core wow fadeInUp">
-							<img src="images/core.jpg">
+							<img src="images/core.jpg" class="qrcode">
 						</div>
 						<div class="text-center contact-state wow fadeInUp">
 							<p>扫码添加微信</p>
 						</div>
-						<div class="phone-number">
-							<p class="">400-820-6372</p>
-						</div>
+						
 					</div>
 				</div>
 				<div class="point-system W-topb W-topb"  style="margin-top: 40px;">
@@ -140,10 +138,11 @@
 				map.openInfoWindow(infoWindow, point); //开启信息窗口
 			});
 
-			$("#navbar li a").bind("click", function() {
-				$("#navbar li").removeClass("current");
-				$(this).parent().addClass("current");
-			})
+			
+			localStorage.logo = "images/logo.jpg";
+			localStorage.bgcontact = "images/contact-top.jpg";
+			$("#logo1,#logo2").html('<img src='+localStorage.logo+'>');
+			$("#bg").html('<img src='+localStorage.bgcontact+'>');
 		</script>
 	</body>
 
