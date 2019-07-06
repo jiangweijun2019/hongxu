@@ -22,17 +22,17 @@
 			<div class="container">
 				<div class="navbar-header page-scroll collapse_btn">
 					<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
 					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
-						<img logo page-scroll src="images/logo.jpg">
+						
 					</div>
 				</div>
 				<div id="logo2" class="logo pull-left">
-					<img logo page-scroll src="images/logo.jpg">
+					
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
@@ -56,8 +56,8 @@
 			</div>
 		</div>
 		<section class="header">
-			<div class="bg">
-				<img src="images/about-top.png" alt="">
+			<div class="bg" id="bg">
+				
 			</div>
 		</section>
 		<section>
@@ -93,32 +93,10 @@
 		<script>
 			/*动画加载效果*/
 			new WOW().init();
-			$(function() {
-				$(".hover-img").hover(
-					function() {
-						$(this).children(".train-bg").addClass('train-hide');
-						$(this).children(".detail").removeClass('train-hide');
-					},
-					function() {
-						$(this).children(".train-bg").removeClass('train-hide');
-						$(this).children(".detail").addClass('train-hide');
-					}
-				)
-
-				$(".invest-group").hover(
-					function() {
-						$(this).addClass("invest-group-hover");
-					},
-					function() {
-						$(this).removeClass("invest-group-hover");
-					}
-				)
-
-				$("#navbar li a").bind("click", function() {
-					$("#navbar li").removeClass("current");
-					$(this).parent().addClass("current");
-				})
-			})
+			localStorage.logo = "images/logo.jpg";
+			localStorage.bgabout = "images/about-top.png";
+			$("#logo1,#logo2").html('<img src='+localStorage.logo+'>');
+			$("#bg").html('<img src='+localStorage.bgabout+'>');
 		</script>
 	</body>
 
